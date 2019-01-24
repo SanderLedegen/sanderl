@@ -353,7 +353,7 @@ p {
 
 .timeline-item {
   position: relative;
-  padding: 0 0 2.5rem 2rem;
+  padding: 0 0 3rem 2rem;
 }
 
 .timeline-item:last-child {
@@ -390,7 +390,7 @@ p {
 .timeline-item-period {
   text-transform: uppercase;
   font-size: 0.7rem;
-  color: #666;
+  color: #777;
   font-weight: bold;
 }
 
@@ -400,12 +400,13 @@ p {
 }
 
 .timeline-item-content p {
-  color: #666;
+  color: #777;
   font-style: italic;
+  font-size: 1rem;
 }
 
 .timeline-item-content .role {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 481px) {
