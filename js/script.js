@@ -1,5 +1,7 @@
+import '../styles/style.scss'
+
 if (console && console.log) {
-  console.log('Oh hi there! ☺️')
+  console.log('Oh hi there! 😊')
 }
 
 const menuEl = document.querySelector('.menu')
