@@ -309,6 +309,7 @@ p {
 .progress-bar {
   margin-bottom: 1rem;
   background-color: #f0f0f0;
+  border-radius: .75rem;
 }
 
 .progress-bar:last-child {
@@ -320,11 +321,12 @@ p {
   background-color: $color-theme;
   height: 1.4rem;
   display: block;
-  color: #5f310f;
+  color: darken($color-theme, 50%);
   font-weight: bold;
-  padding-left: 5px;
+  padding-left: .75rem;
   font-size: .9rem;
   transition: width 1.5s ease-in-out;
+  border-radius: .75rem;
 }
 
 .progress-bar label {
