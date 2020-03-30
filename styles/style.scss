@@ -550,6 +550,12 @@ p {
   fill: #fff;
 }
 
+.social-media-icons {
+  .social-link {
+    background: none;
+  }
+}
+
 @media (min-width: 481px) {
   .footer .contact-wrapper {
     display: flex;
