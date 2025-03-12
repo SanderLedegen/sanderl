@@ -1,0 +1,15 @@
+.img-small div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-small img {
+  max-height: calc(var(--figure-img-max-height) * 0.5);
+}
+
+.img-small div:first-child {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+}
