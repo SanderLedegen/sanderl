@@ -36,8 +36,6 @@ In OO programming, you generally can't extend from multiple base classes. (Well,
 in some languages like C++ you _can_ but it can get quite ugly if you're dealing
 with more advanced structures.)
 
-![The diamond problem shown in a UML diagram](2d-platformer-ecs/uml-diamond-inheritance.svg 'The diamond problem shown in a UML diagram')
-
 Can we get around this issue using a completely different approach and pick up
 more benefits along the way? Yes, we can! Enter ECS.
 
@@ -98,7 +96,7 @@ and linking errors, that is.
 Initially, this went just fine. It didn't take me too much time to implement a
 Geometry Wars-like game using C++ and ECS.
 
-{{< video src="2d-platformer-ecs/geometry-wars.webm" controls="true" autoplay="true" loop="true" title="Geometry Wars-like game using C++ and the ECS pattern" >}}
+{{< video src="images/geometry-wars.webm" controls="true" autoplay="true" loop="true" title="Geometry Wars-like game using C++ and the ECS pattern" >}}
 
 However, after a while, it was too hard to keep up with all the missing source
 and header files and I also had to look for the assets myself. You see, the
@@ -307,7 +305,7 @@ The same idea is applied to other systems. You get all entities, or a subset of
 them using tags, you check for the presence of one or more components, do some
 calculations based on it, update the data, and you're done.
 
-{{< video src="2d-platformer-ecs/toggling-systems.webm" controls="true" autoplay="true" loop="true" title="Toggling systems has become very easy" >}}
+{{< video src="images/toggling-systems.webm" controls="true" autoplay="true" loop="true" title="Toggling systems has become very easy" >}}
 
 I really like the way systems interact with entities and their components. Each
 system has its own responsibility and kind of stands on its own, both in the
@@ -322,7 +320,7 @@ walk "through" it.
 You can find a demo and the code on my GitHub repo,
 [here](https://github.com/SanderLedegen/2d-platformer-ecs).
 
-![Screenshot of my implementation of a Super Mario game](2d-platformer-ecs/super-mario.png 'Screenshot of my implementation of a Super Mario game')
+![Screenshot of my implementation of a Super Mario game](images/super-mario.png 'Screenshot of my implementation of a Super Mario game')
 
 Credits to the original artists of various assets I used and tools I used to
 chop up sprite sheets can be found in the `README.md` of said repo.

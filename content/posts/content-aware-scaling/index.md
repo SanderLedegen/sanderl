@@ -16,15 +16,15 @@ toc: true
 Imagine you've got this landscape-oriented photo but you want it to be square.
 In other words, you want to change its aspect ratio.
 
-![The original image featuring a person on the left and a castle on the right](content-aware-scaling/castle.jpg 'The original image featuring a person on the left and a castle on the right')
+![The original image featuring a person on the left and a castle on the right](images/castle.jpg 'The original image featuring a person on the left and a castle on the right')
 
 In this situation, you've got a few options: you either crop the image and lose
 maybe important or interesting parts of the image, or you accept the distortion
 because everything will be squeezed together. But what if there's another
 option? That option listens to the name of content-aware scaling.
 
-![The squeezed version of the image, not losing any content](content-aware-scaling/castle-resized.jpg#small 'The squeezed version of the image, not losing any content')
-![The cropped version of the image, not squeezed but losing content (darkened parts)](content-aware-scaling/castle-cropped.jpeg#small 'The cropped version of the image, not squeezed but losing content (darkened parts)')
+![The squeezed version of the image, not losing any content](images/castle-resized.jpg#small 'The squeezed version of the image, not losing any content')
+![The cropped version of the image, not squeezed but losing content (darkened parts)](images/castle-cropped.jpeg#small 'The cropped version of the image, not squeezed but losing content (darkened parts)')
 
 ## The idea
 
@@ -74,7 +74,7 @@ is called convolution and goes as follows:
 - you sum up the result of all these multiplications;
 - the final result is the new origin pixel's value.
 
-![Visualisation of kernel convolution ([Michael Plotke](https://commons.wikimedia.org/wiki/User:Plotke), [2D Convolution Animation](https://commons.wikimedia.org/wiki/File:2D_Convolution_Animation.gif), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode))](content-aware-scaling/kernel-convolution.gif 'Visualisation of kernel convolution
+![Visualisation of kernel convolution ([Michael Plotke](https://commons.wikimedia.org/wiki/User:Plotke), [2D Convolution Animation](https://commons.wikimedia.org/wiki/File:2D_Convolution_Animation.gif), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode))](images/kernel-convolution.gif 'Visualisation of kernel convolution
 ([Michael Plotke](https://commons.wikimedia.org/wiki/User:Plotke), [2D Convolution Animation](https://commons.wikimedia.org/wiki/File:2D_Convolution_Animation.gif), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/legalcode))')
 
 To give an additional example, the following kernel is like an [identity
@@ -121,7 +121,7 @@ Combining both horizontal and vertical derivatives can be done by applying good
 ol' Pythagoras' theorem and will finally yield the new pixel's value. If we
 apply these Sobel kernels to our image from above, we get the following result.
 
-![Edge detection applied to the original image from above](content-aware-scaling/castle-sobel.jpg 'Edge detection applied to the original image from above')
+![Edge detection applied to the original image from above](images/castle-sobel.jpg 'Edge detection applied to the original image from above')
 
 Notice how all edges are clearly visible &ndash; even the clouds! &ndash; and
 comprise the "more busy" or important parts of the image. These edges should be
@@ -245,7 +245,7 @@ seam and you shift the pixels of the coloured image to the right of the seam one
 place left. That way the pixels beneath the seam will get removed, creating a
 new `(width - 1)` &times; `height` image.
 
-![The red line shows the seam with the least energy and will get removed](content-aware-scaling/castle-seam.webp 'The red line shows the seam with the least energy and will get removed.')
+![The red line shows the seam with the least energy and will get removed](images/castle-seam.webp 'The red line shows the seam with the least energy and will get removed.')
 
 In the image above, you can see the seam[^2] with the least energy that will get
 removed.
@@ -256,7 +256,7 @@ Finally, you can repeat all of these steps if you want to shrink an image more
 than just one pixel. In the video below you can see all the seams that are
 chosen to get the original image to half its width without distorting the image.
 
-{{< video src="content-aware-scaling/castle-shrinking.webm" controls="true" autoplay="true" loop="true" title="Shrinking the original image to half its width, making all the chosen seams visible in red" >}}
+{{< video src="images/castle-shrinking.webm" controls="true" autoplay="true" loop="true" title="Shrinking the original image to half its width, making all the chosen seams visible in red" >}}
 
 ## Remarks
 

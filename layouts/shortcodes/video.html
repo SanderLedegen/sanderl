@@ -10,18 +10,7 @@
 {{ $title:= .Get `title` }}
 
 
-<!-- checking cdn -->
-{{ if hasPrefix $videoPath "http" }}
-  {{ .Scratch.Set "video_path" $videoPath }}
-
-  <!-- checking assets -->
-{{ else if fileExists (add `assets/` $videoPath) }}
-  {{ .Scratch.Set "video_path" (resources.Get $videoPath).RelPermalink }}
-
-  <!-- checking content/static -->
-{{ else }}
-  {{ .Scratch.Set "video_path" (relURL $videoPath) }}
-{{ end }}
+{{ .Scratch.Set "video_path" $videoPath }}
 
 {{ $videoPath = .Scratch.Get "video_path" }}
 
