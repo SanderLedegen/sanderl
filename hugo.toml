@@ -35,7 +35,7 @@ singleDateFormat = '2 January 2006'
 # Breadcrumbs
 breadcrumbs = false
 
-[[params.umami]]
+[params.umami]
 enable = true
 websiteId = 'c4a8e76b-b989-4bb8-8f6c-eb3f59412e56'
 jsLocation = 'a-script.js'
